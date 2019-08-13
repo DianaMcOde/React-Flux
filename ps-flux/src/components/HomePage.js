@@ -5,6 +5,7 @@ function HomePage() {
     <div className="jumbotron">
       <h1>React with Flux</h1>
       <p>This is the Homepage</p>
+      <a href="./about">About</a>
     </div>   
   )
 }
