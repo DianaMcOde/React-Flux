@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getCourses } from "../api/courseApi";
+import CourseList from "./CourseList";
 
 function CoursesPage() {
     const [courses, setCourses ] = useState([]);
@@ -12,33 +13,12 @@ useEffect(() => {
     getCourses().then(coursesData => setCourses(coursesData));
 }, []);
 
-   function renderRow(course) {
-        return(
-            <tr key={course.id}>
-                <td>{course.title}</td>
-                <td>{course.category}</td>
-                <td>{course.authorId}</td>
-            </tr>
-        )
-    }
-
-        return (
-            <>
-                <h2>Courses</h2>
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Category</th>
-                            <th>Author Id</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {courses.map(renderRow)}  
-                    </tbody>         
-                </table>
-            </>
-        )
-    }
+    return (
+        <>
+            <h2>Courses</h2>
+            <CourseList courses={courses} />
+        </>
+    )
+}
 
 export default CoursesPage;
