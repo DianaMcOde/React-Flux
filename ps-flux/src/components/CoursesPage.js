@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getCourses } from "../api/courseApi";
 import CourseList from "./CourseList";
 
-function CoursesPage() {
+function CoursesPage(props) {
     const [courses, setCourses ] = useState([]);
 
 // Similar to componentDidMount and componentDidUpdate
