@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as courseApi from '../api/courseApi';
 import CourseForm from './CourseForm';
 import { toast } from 'react-toastify';
@@ -12,6 +12,13 @@ const ManageCoursePage = props => {
         authorId: null,
         category: "",
     })
+
+    useEffect( () => {
+        const slug = props.match.params.slug; //from the path `/courses/:slug`
+        if (slug) {
+            courseApi.getCourseBySlug(slug).then(_course => setCourse(_course));
+        }
+    }, [props.match.params.slug]); //If this changes, the component will re-render
 
     function handleChange(event) {
         //copy the course object and set the properties to the values passed
