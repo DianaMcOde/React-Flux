@@ -6,21 +6,31 @@ import CourseForm from './CourseForm';
 import * as courseActions from "../actions/courseActions";
 
 const ManageCoursePage = props => {
-    const [ errors, setErrors ] = useState({})
+    const [ errors, setErrors ] = useState({});
+    const [ courses, setCourses ] = useState(courseStore.getCourses());
     const [ course, setCourse ] = useState({
         id: null,
         slug: "",
         title: "",
         authorId: null,
         category: "",
-    })
+    });
 
     useEffect( () => {
+        courseStore.addChangeListener(onChange); // Runs onChange() when courseStore changes
         const slug = props.match.params.slug; //from the path `/courses/:slug`
-        if (slug) {
+        if (courses.length === 0){  // on Page Load check if there are any courses in state
+            courseActions.loadCourses(); //once this is executed, the onChange function is called and updates setCourses
+        }
+        else if (slug) {
             setCourse(courseStore.getCourseBySlug(slug));
         }
-    }, [props.match.params.slug]); //If this changes, the component will re-render
+        return () => courseStore.removeChangeListener(onChange);
+    }, [courses.length, props.match.params.slug]); //If this changes, the component will re-render
+
+    function onChange(){
+        setCourses(courseStore.getCourses());
+    }
 
     function handleChange(event) {
         //copy the course object and set the properties to the values passed
