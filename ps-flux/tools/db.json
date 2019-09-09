@@ -2,7 +2,7 @@
   "courses": [
     {
       "id": 1,
-      "title": "Securing React Apps with Auth0",
+      "title": "Securing React Apps JS",
       "slug": "react-auth0-authentication-security",
       "authorId": 1,
       "category": "JavaScript"
@@ -101,6 +101,47 @@
       "authorId": 1,
       "category": "React",
       "createdAt": 1567683955767
+    },
+    {
+      "id": 15,
+      "slug": "hope-it-works",
+      "title": "Hope it works",
+      "authorId": 2,
+      "category": "hope",
+      "createdAt": 1568026259512
+    },
+    {
+      "id": 16,
+      "slug": "hope-it-works-part-2",
+      "title": "Hope it works! Part 2",
+      "authorId": 2,
+      "category": "Help",
+      "createdAt": 1568026428267
+    },
+    {
+      "initialCourses": {},
+      "title": "fdag",
+      "authorId": 2,
+      "category": "afgad",
+      "createdAt": 1568028252756,
+      "slug": "fdag",
+      "id": 17
+    },
+    {
+      "id": 18,
+      "slug": "sadf",
+      "title": "sadf",
+      "authorId": 1,
+      "category": "dfsasdf",
+      "createdAt": 1568028320175
+    },
+    {
+      "id": 19,
+      "slug": "fadsg",
+      "title": "fadsg",
+      "authorId": 1,
+      "category": "adga",
+      "createdAt": 1568028467934
     }
   ],
   "authors": [

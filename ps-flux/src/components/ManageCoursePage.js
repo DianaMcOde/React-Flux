@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import * as courseApi from '../api/courseApi';
-import CourseForm from './CourseForm';
 import { toast } from 'react-toastify';
+
+import courseStore from "../store/courseStore";
+import CourseForm from './CourseForm';
+import * as courseActions from "../actions/courseActions";
 
 const ManageCoursePage = props => {
     const [ errors, setErrors ] = useState({})
@@ -16,7 +18,7 @@ const ManageCoursePage = props => {
     useEffect( () => {
         const slug = props.match.params.slug; //from the path `/courses/:slug`
         if (slug) {
-            courseApi.getCourseBySlug(slug).then(_course => setCourse(_course));
+            setCourse(courseStore.getCourseBySlug(slug));
         }
     }, [props.match.params.slug]); //If this changes, the component will re-render
 
@@ -41,7 +43,7 @@ const ManageCoursePage = props => {
     function handleSubmit(event) {
         event.preventDefault();
         if (!formIsValid()) return; //If the form is not valid, then exit the function
-        courseApi.saveCourse(course).then(()=> {
+        courseActions.saveCourse(course).then(()=> {
             props.history.push("/courses"); //Another way to re-direct using the history from props
             toast.success("Course saved.")
         })
