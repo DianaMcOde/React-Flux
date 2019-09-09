@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 import courseStore from "../store/courseStore";
 import CourseList from "./CourseList";
-import { loadCourses } from "../actions/courseActions";
+import { loadCourses, deleteCourse } from "../actions/courseActions";
 
 function CoursesPage(props) {
-    const [courses, setCourses ] = useState(courseStore.getCourses()); // ourses initialised to whatever is in the flux store
+    const [courses, setCourses ] = useState(courseStore.getCourses()); // courses initialised to whatever is in the flux store
 
 // Similar to componentDidMount and componentDidUpdate
 // A dependency needs to be included as an argument or it will run every time the app renders
@@ -29,7 +29,7 @@ function onChange() {
         <>
             <h2>Courses</h2>
             <Link className="btn btn-primary" to="/course">Add Course</Link>
-            <CourseList courses={courses} />
+            <CourseList courses={courses} deleteCourse={deleteCourse}/>
         </>
     )
 }

@@ -1,34 +1,6 @@
 {
   "courses": [
     {
-      "id": 1,
-      "title": "Securing React Apps JS",
-      "slug": "react-auth0-authentication-security",
-      "authorId": 2,
-      "category": "JavaScript"
-    },
-    {
-      "id": 2,
-      "title": "React: The Big Picture",
-      "slug": "react-big-picture",
-      "authorId": 1,
-      "category": "JavaScript"
-    },
-    {
-      "id": 3,
-      "title": "Creating Reusable React Components",
-      "slug": "react-creating-reusable-components",
-      "authorId": 1,
-      "category": "JavaScript"
-    },
-    {
-      "id": 4,
-      "title": "Building a JavaScript Development Environment",
-      "slug": "javascript-development-environment",
-      "authorId": 1,
-      "category": "JavaScript"
-    },
-    {
       "id": 5,
       "title": "Building Applications with React and Redux",
       "slug": "react-redux-react-router-es6",
@@ -69,87 +41,6 @@
       "slug": "web-components-shadow-dom",
       "authorId": 1,
       "category": "HTML5"
-    },
-    {
-      "id": 11,
-      "slug": "remaining-positive",
-      "title": "Remaining Positive",
-      "authorId": 1,
-      "category": "Wellbeing",
-      "createdAt": 1567678138069
-    },
-    {
-      "id": 12,
-      "slug": "why-sleep-is-important",
-      "title": "Why sleep is important",
-      "authorId": 2,
-      "category": "Wellbeing",
-      "createdAt": 1567679334816
-    },
-    {
-      "id": 13,
-      "slug": "as",
-      "title": "as",
-      "authorId": 1,
-      "category": "something",
-      "createdAt": 1567680260999
-    },
-    {
-      "id": 14,
-      "slug": "this-is-awesome",
-      "title": "This is awesome!",
-      "authorId": 1,
-      "category": "React",
-      "createdAt": 1567683955767
-    },
-    {
-      "id": 15,
-      "slug": "hope-it-works",
-      "title": "Hope it works",
-      "authorId": 2,
-      "category": "hope",
-      "createdAt": 1568026259512
-    },
-    {
-      "id": 16,
-      "slug": "hope-it-works-part-2",
-      "title": "Hope it works! Part 2",
-      "authorId": 2,
-      "category": "Help",
-      "createdAt": 1568026428267
-    },
-    {
-      "initialCourses": {},
-      "title": "fdag",
-      "authorId": 2,
-      "category": "afgad",
-      "createdAt": 1568028252756,
-      "slug": "fdag",
-      "id": 17
-    },
-    {
-      "id": 18,
-      "slug": "sadf",
-      "title": "sadf",
-      "authorId": 1,
-      "category": "dfsasdf",
-      "createdAt": 1568028320175
-    },
-    {
-      "id": 19,
-      "slug": "fadsg",
-      "title": "fadsg",
-      "authorId": 1,
-      "category": "adga",
-      "createdAt": 1568028467934
-    },
-    {
-      "id": 20,
-      "slug": "th",
-      "title": "th",
-      "authorId": 1,
-      "category": "sfgsfsdfgsdfg",
-      "createdAt": 1568035384878
     }
   ],
   "authors": [
